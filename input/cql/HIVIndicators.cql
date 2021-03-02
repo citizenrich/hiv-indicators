@@ -20,11 +20,11 @@ context Patient
 
 define "HIV Positive Observation":
   [Observation: "HIV 1 and 2 tests - Meaningful Use set"] O
-    where O.value = 'HIV Positive'
+    where O.value ~ "HIV Positive"
 
 define "HIV Negative Observation":
   [Observation: "HIV 1 and 2 tests - Meaningful Use set"] O
-    where O.value = 'HIV Negative'
+    where O.value ~ "HIV Negative"
 
 define "Is HIV Positive":
   exists ("HIV Positive Observation")
