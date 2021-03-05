@@ -18,8 +18,18 @@ code "HIV Positive": '86406008' from "SNOMED-CT" display 'HIV Positive'
 
 context Patient
 
-/* define "HIV Condition":
-  exists ["Condition": "HIV Positive"] */
+define "Sex": Patient.gender
+
+// not working: everyone is false for some reason
+define "HIV Condition":
+  exists ["Condition": "HIV Positive"]
 
 /* define "Get Condition from CodeSystem Declaration":
   [Condition: "SNOMED:86406008"] */
+
+define "Initial Population": true
+
+define "Denominator": true
+
+define "Numerator":
+  "Sex" = 'female'

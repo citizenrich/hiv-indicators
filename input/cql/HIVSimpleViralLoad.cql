@@ -20,6 +20,8 @@ codesystem "LOINC": 'http://loinc.org'
 // * Used range of 200 (very low) -> 1000000 (very high)
 code "HIV 1 RNA NAA+probe (Specimen)": '25836-8' from "LOINC" display 'HIV 1 RNA NAA+probe (Specimen)'
 
+context Patient
+
 define "Suppressed":
   [Observation: "HIV 1 RNA NAA+probe (Specimen)"] Observation
     where Observation.value < 1000 'copies/mL'
@@ -40,3 +42,12 @@ define "Living with HIV and on ART with suppressed viral load results (<1000 cop
 define "Living with HIV and on ART with unsuppressed viral load results (>1000 copies/mL)":
   ["Observation": "HIV 1 RNA NAA+probe (Specimen)"] Observation
     where Observation.value >= 1000 'copies/mL'
+
+define "Sex": Patient.gender
+
+define "Initial Population": true
+
+define "Denominator": true
+
+define "Numerator":
+  "Sex" = 'female'

@@ -33,3 +33,10 @@ define "Age Group/Sex":
 
 define "Age Group/Sex/HIV Test Results":
   AR."Age Group".code + ':' + "Sex" + ':' + "HIV Test Results".code */
+
+define "Initial Population": true
+
+define "Denominator": true
+
+define "Numerator":
+  "Sex" = 'female'

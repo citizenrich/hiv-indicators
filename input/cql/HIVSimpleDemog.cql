@@ -20,6 +20,7 @@ context Patient
 
 define "Sex": Patient.gender
 
+// not working as expected
 define "Age Group Test":
   AR."Age Group".code
 
@@ -80,3 +81,10 @@ define "Age Group Test":
   define Patient65ToHighestAndMale:
     AgeInYearsAt(start of "MeasurementPeriod") >= 65
       and Patient.gender = 'male'
+
+define "Initial Population": true
+
+define "Denominator": true
+
+define "Numerator":
+  "Sex" = 'female'

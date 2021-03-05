@@ -64,7 +64,3 @@ define "Numerator":
 
 /* define "Measure Population":
   "Initial Population" */
-
-/* Continuous variable measure with Sum as the aggregate method */
-/* define function "Measure Observation"(measureReport MeasureReport):
-  measureReport.group[0].measureScore.value.value */

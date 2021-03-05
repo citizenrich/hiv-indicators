@@ -21,3 +21,10 @@ define "Female":
 
 define "Male":
   Patient.gender = 'male'
+
+define "Initial Population": true
+
+define "Denominator": true
+
+define "Numerator":
+  "Sex" = 'female'
