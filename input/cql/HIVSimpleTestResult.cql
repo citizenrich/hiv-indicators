@@ -59,8 +59,8 @@ define "Initial Population": true
 
 define "Denominator": true
 
-define "Numerator":
-  "Sex" = 'female'
+define "Numerator": true
+  /* "Sex" = 'female' */
 
 /* define "Measure Population":
   "Initial Population" */
